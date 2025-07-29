@@ -1,53 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
-    android:gravity="center">
-
-    <!-- Text Label -->
-    <TextView
-        android:id="@+id/text_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter your website address :"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
-
-
-    <EditText
-        android:id="@+id/weburl"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter website URL (e.g., https://example.com)"
-        android:textStyle="bold"
-        android:textColor="#222222"
-        android:hintTextColor="#888888"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center">
 
-        android:inputType="textUri"
+        <!-- HR Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="HR"
+            android:textSize="25sp"
+            android:textStyle="italic" />
 
-    android:padding="12dp"
-    android:layout_marginBottom="16dp"
-    android:layout_marginTop="8dp"/>
+        <!-- Label -->
+        <TextView
+            android:id="@+id/text_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your website address:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
+        <!-- URL Input -->
+        <EditText
+            android:id="@+id/weburl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  https://example.com"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:textColorHint="#888888"
+            android:inputType="textUri"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/edit_text" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Continue"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#3F51B5"
-        android:elevation="4dp"
-        android:padding="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:layout_gravity="center_horizontal"
-        />
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/black"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center_horizontal" />
 
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>
